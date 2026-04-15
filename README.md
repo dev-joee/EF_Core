@@ -1,9 +1,3 @@
-Got the structure. Now let me fetch the key files for a complete picture.
-
-Got everything I need. Here's a full description based on the actual code:
-
----
-
 ## EF_Core — Blog Manager (Console App)
 
 A C# console application built on **.NET 10** that demonstrates the **Code First** approach with **Entity Framework Core**, using **SQLite** as the database backend.
