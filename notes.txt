@@ -1,0 +1,64 @@
+EF Core is an ORM (Object Relational Mapper)
+it allows you to build and modify tables in relational databases without manually doing it
+
+- Manually
+    Create Table
+    Insert Into
+    Delete From
+    etc..
+
+Using EF Core you will be able to do all of that using your code
+
+* we will use Sqlite for this tutrial, but it works with all relational databases
+
+## First set up your packages
+
+❯ dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+❯ dotnet tool install --global dotnet-ef -- Done Once for all time
+❯ dotnet add package Microsoft.EntityFrameworkCore.Design
+
+## Our Project Structure
+
+-- Dir
+context/    -> where all database requests and responces files are located
+db/         -> where the local database is installed
+models/     -> holds all the models (objects in code that would be tables in database)
+
+-- files
+context/BloggingContext -> Database Configration
+models/Blog             -> Our First Entity
+models/Post             -> Our Second Entity
+
+-- Libraties
+System                          -> work with .Net 
+System.Linq                     -> Linq is important for EF Core syntax
+Microsoft.EntityFrameworkCore   -> EF Core itself
+
+inside of our models we have all objects (database entities) and each class has the following
+- properties (data members)
+- methods related to this entity
+    - List<entity> GetAll()
+    - CRUD operations
+        - Retrieve(id)
+        - Add(new_entity)
+        - Update(id, new_entity)
+        - Delete(entity)
+    ** Note ** Each one of these methods talks to BloggingContext via an object called dbContext to be able to access the database
+    Model <-> dbContext <-> Database
+
+## Some Linq Finctions
+
+- Where            -> filters a list
+- Include          -> include arguments to a returned list
+- FirstOrDefault   -> return first matched value or null if nothing matches
+
+## BloggingContext class
+
+this is the class where we set up our database connection configration
+it inhirites from DbContext Class which is made by EF Core
+
+-- Class Content 
+    - DbSet<entity>             -> the actual database rows 
+    - override OnConfugring     -> holds the connection configration inside of DbContextOptionsBuilder parameter_name
+
+## Migrations
