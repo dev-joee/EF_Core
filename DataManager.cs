@@ -47,6 +47,7 @@ public static class DataManager
             System.Console.WriteLine($"blog id: {blog.Id}");
             System.Console.WriteLine($"blog name: {blog.Name}");
             System.Console.WriteLine($"blog url: {blog.Url}");
+            System.Console.WriteLine("---");
         }
 
         System.Console.WriteLine("---");
@@ -116,6 +117,7 @@ public static class DataManager
             System.Console.WriteLine($"title: {post.Title}");
             System.Console.WriteLine($"content: {post.Content}");
             System.Console.WriteLine($"Blog Id: {post.BlogId}");
+            System.Console.WriteLine("---");
         }
 
         System.Console.WriteLine("---\n");
