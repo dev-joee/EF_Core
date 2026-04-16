@@ -49,8 +49,7 @@ public static class DataManager
             System.Console.WriteLine($"blog url: {blog.Url}");
             System.Console.WriteLine("---");
         }
-
-        System.Console.WriteLine("---");
+        System.Console.WriteLine("");
     } 
     
     public static void AddPost()
@@ -120,7 +119,7 @@ public static class DataManager
             System.Console.WriteLine("---");
         }
 
-        System.Console.WriteLine("---\n");
+        System.Console.WriteLine("");
     }
 
     public static void UpdatePost()

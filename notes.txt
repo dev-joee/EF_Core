@@ -60,5 +60,3 @@ it inhirites from DbContext Class which is made by EF Core
 -- Class Content 
     - DbSet<entity>             -> the actual database rows 
     - override OnConfugring     -> holds the connection configration inside of DbContextOptionsBuilder parameter_name
-
-## Migrations
