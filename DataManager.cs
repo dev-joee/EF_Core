@@ -116,6 +116,7 @@ public static class DataManager
             System.Console.WriteLine($"title: {post.Title}");
             System.Console.WriteLine($"content: {post.Content}");
             System.Console.WriteLine($"Blog Id: {post.BlogId}");
+            System.Console.WriteLine($"Blog Name: {post.Blog.Name}");
             System.Console.WriteLine("---");
         }
 

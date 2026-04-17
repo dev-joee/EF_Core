@@ -25,7 +25,7 @@ public class Post
         {
             try
             {
-                posts = dbContext.Posts.ToList();
+                posts = dbContext.Posts.Include(p => p.Blog).ToList();
             }
             catch (Exception ex)
             {
